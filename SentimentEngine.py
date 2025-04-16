@@ -7,6 +7,8 @@ import os
 class SentimentEngine:
     def __init__(self, ticker):
         self.ticker = ticker
+        self.chatgpt_api_url = "https://api.openai.com/v1/chat/completions"
+        self.chatgpt_api_key = os.getenv("GPT_API_KEY")
         self.news_api_url = "https://newsapi.org/v2/everything"
         self.alpha_vantage_url = "https://www.alphavantage.co/query"
         self.api_key = os.getenv("NEWS_API_KEY")
